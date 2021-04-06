@@ -1,17 +1,14 @@
 package com.example.demo.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import io.swagger.annotations.ApiModel;
+import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Data
+@Builder(toBuilder = true)
 @Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@ApiModel(description = "Simple pojo to check swagger api")
 public class ExchangeInfo {
+
 	private String currency;
 
 }
